@@ -8,7 +8,7 @@ function ImageLazyLoad(props) {
 
     return (
         <div>
-            <img id={`image-${props.imageIndex}`} className="image"alt="" orig-src={props.actualImage} src={props.lowQualityImage} />
+            <img id={`image-${props.imageIndex}`} className="image" alt="" orig-src={props.actualImage} src={props.lowQualityImage} />
         </div>
     )
     

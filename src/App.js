@@ -6,7 +6,7 @@ import Observer from './observer/interaction-observer';
 let callback = (imagesOnView, observer)=>{
   console.log(imagesOnView);
   imagesOnView.forEach((image)=>{
-    if(image.boundingClientRect.top <= 300){
+    if(image.isIntersecting){
       let imageElement = image.target;
       imageElement.setAttribute('src', imageElement.getAttribute("orig-src"));
       observer.unobserve(imageElement)
@@ -32,7 +32,7 @@ function App() {
       <header className="App-header">
         React hook - Image Lazy Load
       </header>
-      <section id="scrollableImagearea">
+      <section>
         {
           imagelist.map((image,index)=>(
             <ImageLazyLoad key={index} imageIndex={index} observer={imageViewPortObserver} lowQualityImage={image.thumbnailUrl} actualImage={image.url}/>
