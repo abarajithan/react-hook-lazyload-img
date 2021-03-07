@@ -4,7 +4,7 @@ class Observer{
         let options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.25
+            threshold: 1
         }
         return new IntersectionObserver(callback, options);
     }
