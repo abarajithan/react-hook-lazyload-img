@@ -2,7 +2,7 @@ class Observer{
 
     static create = (callback) => {
         let options = {
-            root: document.querySelector('#scrollableImagearea'),
+            root: null,
             rootMargin: '0px',
             threshold: 0.25
         }
